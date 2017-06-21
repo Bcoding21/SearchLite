@@ -65,3 +65,5 @@ public class App {
       gson::toJson); // <- this is called a method reference
   }
 }
+
+"Hello"
