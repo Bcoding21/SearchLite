@@ -71,6 +71,7 @@ public class App {
       (req, res) -> HistoryClassDTO.builder().query("Howardwest.google.com").email(req.queryMap("email").value()),
       gson::toJson);
       "hi"
+      "hey yall this is Lauren"
 
   }
 }
