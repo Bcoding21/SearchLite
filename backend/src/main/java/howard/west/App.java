@@ -63,5 +63,13 @@ public class App {
       "application/json",
       (req, res) -> ResultDTO.builder().term(req.queryMap("q").value()),
       gson::toJson); // <- this is called a method reference
+
+
+      get(
+      "/history",
+      "application/json",
+      (req, res) -> HistoryClassDTO.builder().query("Howardwest.google.com").email(req.queryMap("email").value()),
+      gson::toJson);
+
   }
 }
