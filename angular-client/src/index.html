@@ -8,7 +8,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<style>
+	body {
+		background-color: #87cefa;
+	}
+</style>
 <body>
+<div id="header">
+<!-- <button id="signIn" (click)="onClickMe()"> sign in <!--<img src="../assets/sign-in-button.png"/>
+	
+</button> -->
+</div>
   <app-root></app-root>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
+</script>
 </body>
 </html>
+

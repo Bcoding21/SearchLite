@@ -1,5 +1,7 @@
+
 import { Component } from '@angular/core';
 import { SearchService } from './search.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,8 +12,11 @@ import { SearchService } from './search.service';
 export class AppComponent {
   term: string;
   result: string;
+  listItems: string[] = ['howard', 'west'];
 
-  constructor(private searchService: SearchService) {}
+  constructor(private searchService: SearchService) {
+  console.log(this.listItems);
+  }
 
   search() {
     this.searchService.search(this.term)

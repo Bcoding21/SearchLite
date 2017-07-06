@@ -1,20 +1,86 @@
+<button id="signIn" (click)="onClickMe()" routerLink="/sign-in" routerLinkActive="active"> sign in <!--<img src="../assets/sign-in-button.png"/>-->
+
+</button> 
 <form>
-<h1>
+
+<h1 class="brandon">
   Search Lite
 </h1>
-<p>
+<p class="name">
   You just searched for {{term}} and the result is {{result}}
 </p>
+<div class="content">
 
-<md-input-container>
-  <input mdInput
-         [(ngModel)]="term"
-         name="term"
-         placeholder="term"
-         type="text"
-         required>
-</md-input-container>
-<button md-raised-button (click)="search()">
-  Search
-</button>
+<div class="button">
+<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+</div>
+</div>
 </form>
+
+<!--<md-list *ngFor="let item of listItems">
+  <md-list-item>item: {{item}}</md-list-item>
+</md-list>-->
+
+
+
+<!-- END Frontend content -->
+
+  <div class="contact" id="contact">
+    <div class="placeholders">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <!-- Add font awesome icons -->
+  <!-- Link to facebook login page -->
+ <div class="col-sm-1 text-center">
+   <a href="https://facebook.com/" class="btn btn-default fa fa-facebook" target="_blank" role="button">
+   </a>
+    </div>
+
+    <!-- Twitter page -->
+<div class="col-sm-1 text-center">
+  <a href="https://twitter.com/" class="btn btn-default fa fa-twitter" target="_blank" role="button">
+  </a>
+    </div>
+  <!-- google page -->
+<div class="col-sm-1 text-center">
+  <a href="https://google.com" class="btn btn-default fa fa-google" target="_blank" role="button">
+  </a>
+      </div>
+  <!-- linkedIn page -->
+<div class="col-sm-1 text-center">
+  <a href="https://www.linkedin.com/" class="btn btn-default fa fa-linkedin" target="_blank" role="button">
+  </a>
+    </div>
+
+  <!-- youtube page -->
+<div class="col-sm-1 text-center">
+  <a href="https://www.youtube.com" class="btn btn-default fa fa-youtube" target="_blank" role="button">
+  </a>
+    </div>
+    <!-- Instagram page -->
+<div class="col-sm-1 text-center">
+  <a href="http://instagram.com/" class="btn btn-default fa fa-instagram" target="_blank" role="button">
+  </a>
+</div>
+<!-- Github page -->
+<div class="col-sm-1 text-center">
+  <a href="http://github.com/" class="btn btn-default fa fa-github" target="_blank" role="button">
+  </a>
+</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
