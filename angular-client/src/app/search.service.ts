@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 export class SearchService {
   constructor(private http: Http) {}
   // docker dns allows you to access the service through it's service name
+
   search(term: string): Observable<{}> {
     return this.http
       .get('http://backend.howard.test:8080/search?q=' + term)
