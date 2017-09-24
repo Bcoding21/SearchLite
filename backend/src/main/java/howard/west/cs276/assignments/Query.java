@@ -115,7 +115,7 @@ public class Query {
 	}
 
 	private static List<Integer> getIntersection(List<Integer> first, List<Integer> second){
-		List<Integer> result = new ArrayList<Integer>(first.size() + second.size());
+		List<Integer> result = new ArrayList<Integer>();
 		int firstIndex = 0, secondIndex = 0;
 
 		while (first_index < first.size() && second_index < second.size()){
@@ -129,7 +129,7 @@ public class Query {
 			}
 
 			else {
-				result.setIndex(first.get(first_index));
+				result.add(first.get(first_index));
 				first_index++;
 				second_index++;
 			}
